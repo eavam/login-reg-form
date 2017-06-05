@@ -1,6 +1,7 @@
 {
   "name": "login-reg",
   "version": "0.1.0",
+  "homepage": "https://egorava.github.io/login-reg-form/build",
   "private": true,
   "devDependencies": {
     "eslint": "^3.19.0",
