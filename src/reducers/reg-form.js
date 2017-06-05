@@ -7,7 +7,6 @@ const initialState = {
 
 const regForm = (state = initialState, action) => {
   switch (action.type) {
-
   case actionTypes.RECEIVE_REG:
     return {
       ...state
@@ -19,11 +18,11 @@ const regForm = (state = initialState, action) => {
       regFormOpen: false,
       fields: {}
     }
-  
+
   case actionTypes.FAILURE_REG:
     return {
       ...state,
-      regFormOpen: false,
+      regFormOpen: false
     }
 
   case actionTypes.TOGGLE_REG:

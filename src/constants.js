@@ -4,7 +4,6 @@ export const RECEIVE_LOGIN = 'RECEIVE_LOGIN'
 export const SUCCESS_LOGIN = 'SUCCESS_LOGIN'
 export const FAILURE_LOGIN = 'FAILURE_LOGIN'
 
-
 export const TOGGLE_REG = 'TOGGLE_REG'
 export const CHANGE_FIELDS_REG = 'CHANGE_FIELDS_REG'
 export const RECEIVE_REG = 'RECEIVE_REG'

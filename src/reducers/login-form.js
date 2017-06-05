@@ -7,7 +7,6 @@ const initialState = {
 
 const loginForm = (state = initialState, action) => {
   switch (action.type) {
-
   case actionTypes.RECEIVE_LOGIN:
     return {
       ...state
@@ -19,11 +18,11 @@ const loginForm = (state = initialState, action) => {
       loginFromOpen: false,
       fields: {}
     }
-  
+
   case actionTypes.FAILURE_LOGIN:
     return {
       ...state,
-      loginFromOpen: false,
+      loginFromOpen: false
     }
 
   case actionTypes.TOGGLE_LOGIN:

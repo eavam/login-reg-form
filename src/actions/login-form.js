@@ -42,25 +42,23 @@ export function changeFieldsLogin(event, newValue) {
 
 export function submitLoginForm() {
   return (dispatch, getState) => {
-
     const { fields } = getState().loginForm
     dispatch(receiveLogin())
     axios({
       url: 'https://reqres.in/api/login',
       method: 'POST',
       data: {
-        'email': fields.login,
-        'password': fields.password
+        email: fields.login,
+        password: fields.password
       }
     })
-    .then(data => {
-      if(data.status === 200) {
-        dispatch(successLogin())
-      } else {
-        dispatch(failureLogin())
-      }
-    })
-    .catch(error => dispatch(failureLogin()))
-
+      .then(data => {
+        if (data.status === 200) {
+          dispatch(successLogin())
+        } else {
+          dispatch(failureLogin())
+        }
+      })
+      .catch(error => dispatch(failureLogin()))
   }
 }

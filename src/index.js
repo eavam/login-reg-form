@@ -13,12 +13,11 @@ import './index.css'
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin()
 
-
 const store = configureStore()
 
 ReactDOM.render(
   <MuiThemeProvider>
-    <Provider store={store} >
+    <Provider store={store}>
       <App />
     </Provider>
   </MuiThemeProvider>,
@@ -26,4 +25,3 @@ ReactDOM.render(
 )
 
 registerServiceWorker()
-

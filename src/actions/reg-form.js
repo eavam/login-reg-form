@@ -44,31 +44,29 @@ export function changeFieldsGender(event, index, value) {
   return {
     type: CHANGE_FIELDS_REG,
     payload: {
-      'sex': value
+      sex: value
     }
   }
 }
 
 export function submitRegForm() {
-  return (dispatch) => {
-
+  return dispatch => {
     dispatch(receiveReg())
     axios({
       url: 'https://reqres.in/api/register',
       method: 'POST',
       data: {
-        'email': 'name',
-        'password': 'pass'
+        email: 'name',
+        password: 'pass'
       }
     })
-    .then(data => {
-      if(data.status === 201) {
-        dispatch(successReg())
-      } else {
-        dispatch(failureReg())
-      }
-    })
-    .catch(error => dispatch(failureReg()))
-
+      .then(data => {
+        if (data.status === 201) {
+          dispatch(successReg())
+        } else {
+          dispatch(failureReg())
+        }
+      })
+      .catch(error => dispatch(failureReg()))
   }
 }

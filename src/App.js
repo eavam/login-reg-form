@@ -9,16 +9,19 @@ import RegForm from './components/RegForm'
 import * as actionsLogin from './actions/login-form.js'
 import * as actionsReg from './actions/reg-form.js'
 
-
 const styleButton = {
   margin: 20
 }
 
 class App extends Component {
-
   render() {
-
-    const { actionsLogin, actionsReg, loginFormOpen, regFormOpen, regFields } = this.props
+    const {
+      actionsLogin,
+      actionsReg,
+      loginFormOpen,
+      regFormOpen,
+      regFields
+    } = this.props
 
     const gender = {
       change: actionsReg.changeFieldsGender,
@@ -27,8 +30,17 @@ class App extends Component {
 
     return (
       <div>
-        <RaisedButton style={styleButton} label='Войти' onClick={actionsLogin.toggleLoginForm} />
-        <RaisedButton style={styleButton} label='Зарегистрироватся' primary={true} onClick={actionsReg.toggleRegForm} />
+        <RaisedButton
+          style={styleButton}
+          label="Войти"
+          onClick={actionsLogin.toggleLoginForm}
+        />
+        <RaisedButton
+          style={styleButton}
+          label="Зарегистрироватся"
+          primary={true}
+          onClick={actionsReg.toggleRegForm}
+        />
         <LoginForm
           open={loginFormOpen}
           handleClose={actionsLogin.toggleLoginForm}
@@ -54,13 +66,13 @@ App.propTypes = {
   actionsLogin: PropTypes.shape({
     toggleLoginForm: PropTypes.func,
     changeFieldsLogin: PropTypes.func,
-    submitLoginForm: PropTypes.func,
+    submitLoginForm: PropTypes.func
   }),
   actionsReg: PropTypes.shape({
     changeFieldsGender: PropTypes.func,
     toggleRegForm: PropTypes.func,
-    submitRegForm: PropTypes.func,
-  }),
+    submitRegForm: PropTypes.func
+  })
 }
 
 function mapStateToProps(state) {
